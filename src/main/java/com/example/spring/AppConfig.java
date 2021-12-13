@@ -1,7 +1,6 @@
 package com.example.spring;
 
 import com.example.spring.discount.DiscountPolicy;
-import com.example.spring.discount.FixDiscountPloicy;
 import com.example.spring.discount.RateDiscountPolicy;
 import com.example.spring.member.MemberRepository;
 import com.example.spring.member.MemberService;
