@@ -2,8 +2,11 @@ package com.example.spring.discount;
 
 import com.example.spring.member.Grade;
 import com.example.spring.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
-public class FixDiscountPloicy implements DiscountPolicy {
+@Component
+public class FixDiscountPolicy implements DiscountPolicy {
     private int discountFixAmount = 1000;
 
     @Override
