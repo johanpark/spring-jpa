@@ -1,4 +1,4 @@
-package com.example.spring.autowired;
+package com.example.spring.beanDefinitionTest.autowired;
 
 import com.example.spring.AutoAppConfig;
 import com.example.spring.discount.DiscountPolicy;

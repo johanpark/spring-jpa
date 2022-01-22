@@ -1,4 +1,4 @@
-package com.example.spring.autowired;
+package com.example.spring.beanDefinitionTest.autowired;
 
 import com.example.spring.member.Member;
 import org.junit.jupiter.api.Test;
