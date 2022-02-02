@@ -20,11 +20,13 @@ public class PrototypeTest {
         System.out.println("prototypeBean1 = " + prototypeBean1);
         System.out.println("prototypeBean2 = " + prototypeBean2);
         Assertions.assertThat(prototypeBean1).isNotSameAs(prototypeBean2);
-
+        ac.close();
         //싱글톤 빈은 스프링 컨테이너 생성 시점에 초기화 메서드가 실행
-        //프로토타입 스코프의 빈은 스프링 컨테이너에서 빈을 조회할때 생성되고, 초기화 메서드도 실행된다.\
+        //프로토타입 스코프의 빈은 스프링 컨테이너에서 빈을 조회할때 생성되고, 초기화 메서드도 실행된다.
 
-        //싱글톤 빈은 스프링 컨테이너가 관리하기 때문에
+        //싱글톤 빈은 스프링 컨테이너가 관리하기 때문에 스프링 컨테이너가 종료될 때 빈의 종료 메서드가 실행
+        //프로토타입 빈은 스프링 컨테이너가 생성과 의존관계 주입 그리고 초기화까지만 관여하고 더는 관리하지 않음
+        //프로토타입 빈은 스프링 컨테이너가 종료될 때 @PreDestroy같은 종료 메서드가 실행되지 않음
     }
 
     @Scope("prototype")
